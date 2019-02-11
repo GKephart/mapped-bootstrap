@@ -3,8 +3,7 @@ const posts =  [{"userId":1,"id":1,"title":"sunt aut facere repellat provident o
 
 
 
-
-function loadPosts() {
+window.onload = () => {
 let renderedPosts = posts.map((index) => {
     return `
     <div class="card">
@@ -15,8 +14,7 @@ let renderedPosts = posts.map((index) => {
   </div>
     `
   });
-
   let target = document.getElementById('target');
-  target.innerHTML = renderedPosts.toString();
-  console.log(target);
+  target.innerHTML = renderedPosts.join("\r\n");
+  //console.log(renderedPosts.toString());
 }
