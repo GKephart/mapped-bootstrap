@@ -3,18 +3,22 @@ const posts =  [{"userId":1,"id":1,"title":"sunt aut facere repellat provident o
 
 
 
-window.onload = () => {
+
+function lookInScriptJsLine7() {
 let renderedPosts = posts.map((index) => {
     return `
     <div class="card">
-  <div class="card-body">
-    <h5 class="card-title">${index.title}</h5>
-    <p class="card-text">${index.body}</p>
-  </div>
+      <div class="card-body">
+        <h5 class="card-title">${index.title}</h5>
+        <p class="card-text">${index.body}</p>
+      </div>
   </div>
     `
   });
+
+
   let target = document.getElementById('target');
+  console.log(target);
   target.innerHTML = renderedPosts.join("\r\n");
-  //console.log(renderedPosts.toString());
+
 }
